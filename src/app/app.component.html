@@ -2,9 +2,12 @@
   <h1>My Goals</h1>
   <ul>
     <li *ngFor= 'let goal of goals'>
-      {{goal}}
+      {{goal.name}}
     </li>
     </ul>
+    <p *nglf='goals.length > 5'>
+      Your Goals are too many.
+      </p>
 </div>
 
 <router-outlet></router-outlet>
