@@ -1,7 +1,7 @@
 <div class="container">
     <h2 class="text-center">Create a new Goal</h2>
     <hr>
-    <form #goalForm='ngForm'>
+    <form (ngSubmit)='submitGoal()' #goalForm='ngForm'>
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" required class="form-control" id="name" [(ngModel)]="newGoal.name" name="name" #name="ngModel">
@@ -13,7 +13,7 @@
         <div class="form-group">
             <label for="description"></label>
             <textarea id="description" name="description" rows="4" class="form-control" [(ngModel)]="newGoal.description"  #description="ngModel"required></textarea>
-            <div [hidden]="desription.valid || description.pristine" class="alert alert-danger">
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
                 <p>Description is required</p>
             </div>
         </div>
