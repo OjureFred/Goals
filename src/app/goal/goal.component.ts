@@ -8,7 +8,7 @@ import { GoalService } from './../goal-service/goal.service';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-  goals: Goal[] = [];
+  goals: Goal[];
 
   toggleDetails(index){
     this.goals[index].showDescription = !this.goals[index].showDescription;
@@ -36,7 +36,7 @@ export class GoalComponent implements OnInit {
   }
 
   constructor(goalService: GoalService) { 
-    this.goals = goalService.getGoals;
+    this.goals = goalService.getGoals();
   }
 
   ngOnInit(): void {
