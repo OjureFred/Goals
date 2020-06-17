@@ -27,12 +27,12 @@ export class QuoteRequestService {
         resolve()
       },
         error => {
-          this.quote.quote = "Never, never, never give up"
-          this.quote.author = "Winston Churchill"
+          this.quote.quote = 'Never, never, never give up';
+          this.quote.author = 'Winston Churchill';
 
-          reject(error)
+          reject(error);
         })
     })
-    return promise
+    return promise;
   }
 }
